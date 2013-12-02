@@ -1,4 +1,5 @@
- /*общие стили */
+
+@media screen and (orientation: landscape) {  /*общие стили */
 *{
     margin:0;
     padding:0;
@@ -13,7 +14,6 @@ body {
     background-image: -o-radial-gradient(600px 300px, circle, #67eaf2, #2b767b 60%);
     background-image: radial-gradient(600px 300px, circle, #67eaf2, #2b767b 60%);*/
 }
-@media screen and (orientation: landscape) { 
   #container {
 	position: relative;
 }
