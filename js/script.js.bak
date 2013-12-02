@@ -562,7 +562,7 @@ function startGame(levelNum) {
 
 // инициализация
 //document.addEventListener("load", function(e){
-	window.onload = function(){
+window.onload = function(){
     canvas = document.getElementById('scene');
     ctx = canvas.getContext('2d');
 	canvasBcg = document.getElementById('background');

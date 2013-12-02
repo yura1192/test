@@ -561,8 +561,7 @@ function startGame(levelNum) {
 }
 
 // инициализация
-//document.addEventListener("load", function(e){
-window.onload = function(){
+document.addEventListener("deviceready", function(){
     canvas = document.getElementById('scene');
     ctx = canvas.getContext('2d');
 	canvasBcg = document.getElementById('background');
@@ -692,7 +691,7 @@ window.onload = function(){
 	//$('#scene').mousedown(function(e) {
 	var mousedownf=function (e){
 	//menu.draw(ctx);
-		//var canvasPosition = $(this).offset();
+		var canvasPosition = $(this).offset();
 		if (e.offsetX){
 			clickX = e.offsetX || 0;
 			clickY = e.offsetY || 0;
@@ -781,7 +780,7 @@ window.onload = function(){
 		
         if (selectedCircleX != undefined && selectedCircleY != undefined) {
 			
-            //var canvasPosition = $(this).offset();
+            var canvasPosition = $(this).offset();
 			var dX = mouseX - clickX;
 			var dY = mouseY - clickY;
 			
@@ -922,4 +921,4 @@ window.onload = function(){
 
     setInterval(drawScene, 30); // скорость отрисовки
 	});
-}//);
+});
