@@ -56,7 +56,7 @@ var d=3;
 
 	}
 
-	canvas.addEventListener('touchmove', handler1,false);
+	canvas.addEventListener('mousemove', handler1,false);
 
     //$('#scene').mouseup(function(e) { // событие mouseup - очистка выбранной окружности
 	//canvas.ontouchend = function(e) {
