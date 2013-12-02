@@ -561,7 +561,7 @@ function startGame(levelNum) {
 }
 
 // инициализация
-document.addEventListener("deviceready", function(){
+$(function(){
     canvas = document.getElementById('scene');
     ctx = canvas.getContext('2d');
 	canvasBcg = document.getElementById('background');

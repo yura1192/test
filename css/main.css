@@ -13,12 +13,10 @@ body {
     background-image: -o-radial-gradient(600px 300px, circle, #67eaf2, #2b767b 60%);
     background-image: radial-gradient(600px 300px, circle, #67eaf2, #2b767b 60%);*/
 }
-@media screen and (orientation: landscape) { 
-  #container {
+
+#container {
 	position: relative;
 }
-
-
 
 /* стили урока */
 #container canvas {
@@ -28,5 +26,4 @@ body {
 
 canvas {
     background-color: transparent;
-}
 }
