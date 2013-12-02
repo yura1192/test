@@ -568,7 +568,6 @@ $(function(){
     ctxBcg = canvasBcg.getContext('2d');
 	width = screen.width;
 	height = screen.height;
-	console.log(screen.height);
 	canvas.width = width;
 	canvasBcg.width = width;
 	
