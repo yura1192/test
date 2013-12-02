@@ -69,7 +69,7 @@ var enableSFX=true;
 var bang;
 var win = 0;
 // -------------------------------------------------------------
-
+win=0;
 function draw(func, transform){
 
 	ctx.save();
@@ -809,14 +809,13 @@ $(function(){
 	
 	try {
 		document.createEvent('TouchEvent');
-		support=true;
+		support=1;
 	} catch (e) {
-		support=false;
-		return;
+		support=0;
 	}
-	if(support) canvas.addEventListener('touchmove',mousemovef);
+	if(support==1) canvas.addEventListener('touchmove',mousemovef);
 	else canvas.addEventListener('mousemove',mousemovef);
-	support=false;
+	support=0;
 
     //$('#scene').mouseup(function(e) { // событие mouseup - очистка выбранной окружности
 	var mouseupf=function (e){
@@ -914,12 +913,11 @@ $(function(){
     }//);
 	try {
 		document.createEvent('TouchEvent');
-		support=true;
+		support=1;
 	} catch (e) {
-		support=false;
-		return;
+		support=0;
 	}
-	if(support) canvas.addEventListener('touchend',mouseupf);
+	if(support==1) canvas.addEventListener('touchend',mouseupf);
 	else canvas.addEventListener('mouseup',mouseupf);
 
     setInterval(drawScene, 30); // скорость отрисовки

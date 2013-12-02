@@ -69,7 +69,6 @@ var enableSFX=true;
 var bang;
 var win = 0;
 // -------------------------------------------------------------
-
 function draw(func, transform){
 
 	ctx.save();
