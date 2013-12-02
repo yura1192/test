@@ -566,9 +566,8 @@ $(function(){
     ctx = canvas.getContext('2d');
 	canvasBcg = document.getElementById('background');
     ctxBcg = canvasBcg.getContext('2d');
-	width = $(window).width();
-	height = $(window).height();
-	
+	width = screen.width;
+	height = screen.height;
 	canvas.width = width;
 	canvasBcg.width = width;
 	
