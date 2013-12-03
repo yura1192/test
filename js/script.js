@@ -919,6 +919,30 @@ $(function(){
 	if(support==1) canvas.addEventListener('touchend',mouseupf);
 	else canvas.addEventListener('mouseup',mouseupf);
 
+	document.addEventListener("backbutton", function(e){
+		if(menu.page=='pause'){
+			menu.page='levels';
+			menu.enabled=true;
+		}else if(menu.page=='levels'){
+			menu.page='main';
+			menu.enabled=true;
+		}else if(menu.page=='settings'){
+			menu.page='main';
+			menu.enabled=true;
+		}else if(menu.page=='info'){
+			menu.page='settings';
+			menu.enabled=true;
+		}else if(menu.page=='view_level'){
+			menu.page='levels';
+			menu.enabled=true;
+		}
+	});
+
+	document.addEventListener("pause", function(e){
+		menu.page='pause';
+		menu.enabled=false;
+	});
+
     setInterval(drawScene, 30); // скорость отрисовки
 	});
 });
