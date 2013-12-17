@@ -225,7 +225,7 @@ var Kinetic = {};
     })();
 
     function FRAF(callback) {
-        window.setTimeout(callback, 1000 / 60);
+        window.setTimeout(callback, 1000 / 30);
     }
 
     Kinetic.Animation.requestAnimFrame = function(callback) {

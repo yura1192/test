@@ -12,7 +12,8 @@ function Bang(config) {
 	var f = 0;
 	var k = 360/config.count;
 	var r;
-	var size = height*0.1;
+	var finished = false;
+	var StarSize = height/16;
 	for(i = 0; i < config.count; i ++) {
 		stars.push(new Star(Math.round(Math.random()), Math.floor(Math.random()*6),config.x,config.y));
 		r = config.radius + Math.random()*(config.radius*0.2) - config.radius*0.1;
@@ -45,6 +46,7 @@ function Bang(config) {
 		onFinish: function() {
 
 			play = false;
+			finished = true;
 			anim.stop();
 		}
 	});
@@ -58,16 +60,23 @@ function Bang(config) {
 	this.isPlaying = function() {
 		return play;
 	}
+	
+	this.isFinished = function() {
+		return finished;
+	}
 
 	this.play = function() {
-		play = true;
-		tween.play();
+		if(!finished && !play)
+		{
+			play = true;
+			tween.play();
+		}
 	}
 
 	this.draw = function() {
 		for(i = 0; i < stars.length; i++) {
 			if(stars[i].drawIndex < 6)
-				ctx.drawImage(img,stars[i].type*64,stars[i].drawIndex*64,64,64,stars[i].x,stars[i].y,size,size);
+				ctx.drawImage(img,stars[i].type*64,stars[i].drawIndex*64,64,64,stars[i].x,stars[i].y,StarSize,StarSize);
 			
 		}
 	}
